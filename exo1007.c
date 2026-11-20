@@ -1,6 +1,12 @@
 #include <stdio.h> // fonctions entrée / sortie
 
-int main () {
+// Déclaration et définition de la procedure
+// prototype : void afficherSolde(float)
+void afficherSolde(float quantite) {
+    printf("Votre solde est %.2f EUR\n", quantite);
+}
+
+int main (void) {
     // solde
     float solde = 100.0f;
     int  choix  = 0;
@@ -16,7 +22,8 @@ int main () {
 
         switch (choix) {
             case 1:
-                printf("TODO: afficher\n");
+                // on appel la procedure afficherSolde
+                afficherSolde(solde);
                 break;
             case 2:
                 printf("TODO: depot\n");
