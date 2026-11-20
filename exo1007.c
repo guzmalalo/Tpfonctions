@@ -38,12 +38,15 @@ int main (void) {
     int  choix  = 0;
 
     do {
-        // affichage menu
+        // --> TODO : Mettre le menu dans une procedure
         printf(" --- Bienvenu à la banque ECE --- \n");
         printf(" 1.- Afficher solde \n");
         printf(" 2.- Faire un depot\n");
         printf(" 3.- Retirer de l'argent \n");
         printf(" 4.- Sortir \n");
+
+        // --->
+
         scanf("%d", &choix);
 
         switch (choix) {
@@ -56,6 +59,8 @@ int main (void) {
                 deposerArgent(&solde);
                 break;
             case 3:
+                // TODO : à faire pour ajd
+                // version procedure et version fonction
                 printf("TODO: retrait\n");
                 break;
             case 4:
