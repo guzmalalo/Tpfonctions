@@ -21,6 +21,17 @@ float fDeposerArgent(float solde) {
     return solde;
 }
 
+// float* pSolde = &solde
+void deposerArgent(float * pSolde) {
+    float montant = 0.0f;
+
+    printf("Quel montant ? ");
+    scanf("%f", &montant);
+
+    *pSolde += montant;
+}
+
+
 int main (void) {
     // solde
     float solde = 100.0f;
@@ -41,7 +52,8 @@ int main (void) {
                 afficherSolde(solde);
                 break;
             case 2:
-                solde = fDeposerArgent(solde);
+                //solde = fDeposerArgent(solde);
+                deposerArgent(&solde);
                 break;
             case 3:
                 printf("TODO: retrait\n");
