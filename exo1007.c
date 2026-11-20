@@ -6,6 +6,21 @@ void afficherSolde(float quantite) {
     printf("Votre solde est %.2f EUR\n", quantite);
 }
 
+// fonction deposer Argent
+// on renvoie le solde mis à jour
+// on reçoit : solde initial.
+float fDeposerArgent(float solde) {
+    float montant = 0.0f;
+
+    printf("Quel montant ? ");
+    scanf("%f", &montant);
+
+    // solde = solde + montant;
+    solde += montant;
+
+    return solde;
+}
+
 int main (void) {
     // solde
     float solde = 100.0f;
@@ -26,7 +41,7 @@ int main (void) {
                 afficherSolde(solde);
                 break;
             case 2:
-                printf("TODO: depot\n");
+                solde = fDeposerArgent(solde);
                 break;
             case 3:
                 printf("TODO: retrait\n");
